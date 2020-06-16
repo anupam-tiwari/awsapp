@@ -13,41 +13,40 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="css/font.css">
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/components.css" rel="stylesheet" type="text/css">
+  <link href="css/user-dashboard.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/index.css">
+        <!--<link rel="stylesheet" href="css/index.css"> -->
         <link rel="stylesheet" href="css/message.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <div class="login-page-wrapper">
+            <div class="login-container w-form">
+                <img src="images/winko-logo-v7-canvas.png" style="width: auto; height: 3cm";></img>
+              <h1 data-membership-id="5ce1e15cc3ea550017f15700" class="login-head"></h1>
 
-        <div id="noCognitoMessage" class="configMessage" style="display: none;">
-            <div class="backdrop"></div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">No Cognito User Pool Configured</h3>
-                </div>
-                <div class="panel-body">
-                    <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 2 of the workshop.</p>
-                </div>
-            </div>
+    <form id="sign-up" name="wf-form-Sign-up-Form" data-name="Sign up Form" method="post" ms-signup="true" class="memberstack-form"></form>
+
+              <div class="field-row">
+                <div class="field-wrapper first-name-wrapper"><input type="text" placeholder="First Name" maxlength="256" required="" ms-field="first-name" class="signup-field w-input"></div>
+                <div class="field-wrapper"><input type="text" placeholder="Last Name" maxlength="256" required="" ms-field="last-name" class="signup-field w-input"></div>
         </div>
-
-        <header>
-          <img src="images/logo.png">
-        </header>
-
-        <section class="form-wrap">
-            <h1>Register</h1>
+       <section class="form-wrap">
+        
             <form id="registrationForm">
-              <input type="email" id="emailInputRegister" placeholder="Email" pattern=".*" required>
-              <input type="password" id="passwordInputRegister" placeholder="Password" pattern=".*" required>
-              <input type="password" id="password2InputRegister" placeholder="Confirm Password" pattern=".*" required>
+              <input class="signup-field w-input" type="email" id="emailInputRegister" placeholder="Email" pattern=".*" required>
+              <input class="signup-field w-input" type="password" id="passwordInputRegister" placeholder="Password" pattern=".*" required>
+              <input class="signup-field w-input" type="password" id="password2InputRegister" placeholder="Confirm Password" pattern=".*" required>
 
-              <input type="submit" value="Let's Ryde">
+              <input type="submit" class="login-button w-button" value="Sign up">
             </form>
         </section>
+
+    </form>
 
         <script src="js/vendor/jquery-3.1.0.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
